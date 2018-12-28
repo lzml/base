@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>E:\mybase;$(VSInstallDir)\VC\atlmfc\include;E:\mybase\flags;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(VSInstallDir)\VC\atlmfc\include;$(SolutionDir)flags;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Gy /FS /bigobj /Zc:sizedDealloc- /Zc:threadSafeInit- /Ob0 /Zi /GR- %(AdditionalOptions)</AdditionalOptions>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <CompileAsWinRT>false</CompileAsWinRT>
