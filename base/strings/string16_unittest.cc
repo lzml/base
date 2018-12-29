@@ -12,12 +12,19 @@
 
 namespace base {
 
+	string16 ASCIIToUTF16222(StringPiece ascii) {
+		
+		return string16(ascii.begin(), ascii.end());
+	}
+
 // We define a custom operator<< for string16 so we can use it with logging.
 // This tests that conversion.
 TEST(String16Test, OutputStream) {
   // Basic stream test.
   {
     std::ostringstream stream;
+	string16(ASCIIToUTF16("Hello, world"));
+	stream << string16(ASCIIToUTF16("Hello, world"));
     stream << "Empty '" << string16() << "' standard '"
            << string16(ASCIIToUTF16("Hello, world")) << "'";
     EXPECT_STREQ("Empty '' standard 'Hello, world'",
