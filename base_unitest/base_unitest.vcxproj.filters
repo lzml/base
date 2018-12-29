@@ -9,6 +9,18 @@
     <ClCompile Include="..\base\strings\string16_unittest.cc">
       <Filter>base\strings</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\strings\nullable_string16_unittest.cc">
+      <Filter>base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\strings\pattern_unittest.cc">
+      <Filter>base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\strings\safe_sprintf_unittest.cc">
+      <Filter>base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\threading\simple_thread_unittest.cc">
+      <Filter>base\threading</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -22,6 +34,9 @@
     </Filter>
     <Filter Include="base\strings">
       <UniqueIdentifier>{c0204be6-9d50-4557-82fb-78bcf4bfbe42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\threading">
+      <UniqueIdentifier>{2ee97502-11f7-41e0-92c6-735fa8ada842}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

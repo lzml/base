@@ -41,7 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\base\process\memory_unittest.cc" />
+    <ClCompile Include="..\base\strings\nullable_string16_unittest.cc" />
+    <ClCompile Include="..\base\strings\pattern_unittest.cc" />
+    <ClCompile Include="..\base\strings\safe_sprintf_unittest.cc" />
     <ClCompile Include="..\base\strings\string16_unittest.cc" />
+    <ClCompile Include="..\base\threading\simple_thread_unittest.cc" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

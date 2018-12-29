@@ -32,4 +32,10 @@ TEST(NullableString16Test, NotEqualsNull) {
   EXPECT_NE(a, b);
 }
 
+TEST(NullableString16Test, NotEqualsNull2) {
+	NullableString16 a(ASCIIToUTF16(""), false);
+	NullableString16 b;
+	EXPECT_NE(a, b);
+}
+
 }  // namespace base
