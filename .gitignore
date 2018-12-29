@@ -20,6 +20,7 @@ third_party/modp_b64/[Rr]elease/
 base_unitest/Debug/
 out/
 Debug/
+!packages/*.*
 *.obj
 *.log
 
