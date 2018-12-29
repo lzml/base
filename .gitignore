@@ -5,27 +5,22 @@
 *.pch
 *.vspscc
 *.vssscc
-*_i.c
-*_p.c
 *.ncb
 *.suo
-*.tlb
-*.tlh
-*.bak
-*.[Cc]ache
-*.ilk
 *.log
 *.sbr
 *.sdf
 *.opensdf
-*.unsuccessfulbuild
 ipch/
 obj/
 third_party/[Ll]ibs
 third_party/modp_b64/[Dd]ebug/
 third_party/modp_b64/[Rr]elease/
 *.VC.db
-*.h.cpp
+base_unitest/Debug/
+out/
+*.obj
+*.log
 
 
 #Visual Studio Code files
