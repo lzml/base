@@ -20,7 +20,8 @@ third_party/modp_b64/[Rr]elease/
 base_unitest/Debug/
 out/
 Debug/
-!packages/*.*
+!packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.0/lib/native/v140/windesktop/msvcstl/static/rt-static/x64/Debug/
+!packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-static.1.8.0/lib/native/v140/windesktop/msvcstl/static/rt-static/x86/Debug/
 *.obj
 *.log
 
