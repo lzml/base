@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="..\base\process\memory_unittest.cc">
+      <Filter>base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\strings\string16_unittest.cc">
+      <Filter>base\strings</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{467d5cf4-53f6-422d-8aa5-9d05d1c35728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\process">
+      <UniqueIdentifier>{bf77446e-7bd1-4738-ad67-3e33f32ae4f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\strings">
+      <UniqueIdentifier>{c0204be6-9d50-4557-82fb-78bcf4bfbe42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
