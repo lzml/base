@@ -14,7 +14,6 @@
 
 namespace base {
 namespace {
-
 static const char kDefaultName[] = "";
 static std::string* g_default_name;
 
@@ -24,7 +23,6 @@ ThreadIdNameManager::ThreadIdNameManager()
     : main_process_name_(NULL),
       main_process_id_(kInvalidThreadId) {
   g_default_name = new std::string(kDefaultName);
-
   AutoLock locked(lock_);
   name_to_interned_name_[kDefaultName] = g_default_name;
 }

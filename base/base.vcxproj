@@ -62,6 +62,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)third_party\libs\$(Configuration)\modp_b64.lib;Psapi.lib;Dbghelp.lib;Setupapi.lib;Winmm.lib;version.lib;Mincore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

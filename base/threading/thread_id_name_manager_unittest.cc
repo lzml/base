@@ -9,6 +9,8 @@
 #include "testing/gtest/include/gtest/gtest.h"
 #include "testing/platform_test.h"
 
+#include "base/at_exit.h" /*修改添加，因为没有在main里面全局初始化base::AtExitManager */
+
 typedef PlatformTest ThreadIdNameManagerTest;
 
 namespace {
@@ -17,7 +19,9 @@ const char kAThread[] = "a thread";
 const char kBThread[] = "b thread";
 
 TEST_F(ThreadIdNameManagerTest, AddThreads) {
+	base::AtExitManager exit_manager;
   base::ThreadIdNameManager* manager = base::ThreadIdNameManager::GetInstance();
+  auto szd = base::ThreadIdNameManager::GetDefaultInternedString();
   base::Thread thread_a(kAThread);
   base::Thread thread_b(kBThread);
 
@@ -32,6 +36,7 @@ TEST_F(ThreadIdNameManagerTest, AddThreads) {
 }
 
 TEST_F(ThreadIdNameManagerTest, RemoveThreads) {
+	base::AtExitManager exit_manager;
   base::ThreadIdNameManager* manager = base::ThreadIdNameManager::GetInstance();
   base::Thread thread_a(kAThread);
 
@@ -48,6 +53,7 @@ TEST_F(ThreadIdNameManagerTest, RemoveThreads) {
 }
 
 TEST_F(ThreadIdNameManagerTest, RestartThread) {
+	base::AtExitManager exit_manager;
   base::ThreadIdNameManager* manager = base::ThreadIdNameManager::GetInstance();
   base::Thread thread_a(kAThread);
 
@@ -63,6 +69,7 @@ TEST_F(ThreadIdNameManagerTest, RestartThread) {
 }
 
 TEST_F(ThreadIdNameManagerTest, ThreadNameInterning) {
+	base::AtExitManager exit_manager;
   base::ThreadIdNameManager* manager = base::ThreadIdNameManager::GetInstance();
 
   base::PlatformThreadId a_id = base::PlatformThread::CurrentId();
@@ -75,6 +82,7 @@ TEST_F(ThreadIdNameManagerTest, ThreadNameInterning) {
 }
 
 TEST_F(ThreadIdNameManagerTest, ResettingNameKeepsCorrectInternedValue) {
+	base::AtExitManager exit_manager;
   base::ThreadIdNameManager* manager = base::ThreadIdNameManager::GetInstance();
 
   base::PlatformThreadId a_id = base::PlatformThread::CurrentId();

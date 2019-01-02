@@ -21,6 +21,12 @@
     <ClCompile Include="..\base\threading\simple_thread_unittest.cc">
       <Filter>base\threading</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\threading\thread_id_name_manager_unittest.cc">
+      <Filter>base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\at_exit_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
