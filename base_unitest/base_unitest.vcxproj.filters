@@ -27,6 +27,9 @@
     <ClCompile Include="..\base\at_exit_unittest.cc">
       <Filter>base</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\threading\non_thread_safe_unittest.cc">
+      <Filter>base\threading</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -43,6 +46,9 @@
     </Filter>
     <Filter Include="base\threading">
       <UniqueIdentifier>{2ee97502-11f7-41e0-92c6-735fa8ada842}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\message_loop">
+      <UniqueIdentifier>{b18d8d68-9712-4679-9971-ba3163e8534c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

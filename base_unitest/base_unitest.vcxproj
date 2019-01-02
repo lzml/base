@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{86bdcefb-d2d3-4bf6-922f-34212ad0c622}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -46,6 +46,7 @@
     <ClCompile Include="..\base\strings\pattern_unittest.cc" />
     <ClCompile Include="..\base\strings\safe_sprintf_unittest.cc" />
     <ClCompile Include="..\base\strings\string16_unittest.cc" />
+    <ClCompile Include="..\base\threading\non_thread_safe_unittest.cc" />
     <ClCompile Include="..\base\threading\simple_thread_unittest.cc" />
     <ClCompile Include="..\base\threading\thread_id_name_manager_unittest.cc" />
     <ClCompile Include="test.cpp" />
