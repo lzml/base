@@ -30,6 +30,12 @@
     <ClCompile Include="..\base\threading\non_thread_safe_unittest.cc">
       <Filter>base\threading</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\threading\thread_unittest.cc">
+      <Filter>base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\task\cancelable_task_tracker_unittest.cc">
+      <Filter>base\task</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -49,6 +55,9 @@
     </Filter>
     <Filter Include="base\message_loop">
       <UniqueIdentifier>{b18d8d68-9712-4679-9971-ba3163e8534c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\task">
+      <UniqueIdentifier>{c6de756d-c3df-4b8c-9f76-2ea184ffcc8c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

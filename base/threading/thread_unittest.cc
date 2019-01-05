@@ -17,6 +17,11 @@
 #include "testing/gtest/include/gtest/gtest.h"
 #include "testing/platform_test.h"
 
+
+#include "base/at_exit.h" /*修改添加，因为没有在main里面全局初始化base::AtExitManager */
+base::AtExitManager g_exit_manager;
+
+
 using base::Thread;
 
 typedef PlatformTest ThreadTest;
@@ -24,8 +29,9 @@ typedef PlatformTest ThreadTest;
 namespace {
 
 void ToggleValue(bool* value) {
-  ANNOTATE_BENIGN_RACE(value, "Test-only data race on boolean "
-                       "in base/thread_unittest");
+	//处理没有导入lib，导致的这个宏无法使用，注释或者导入lib都可以
+  //ANNOTATE_BENIGN_RACE(value, "Test-only data race on boolean "
+  //                     "in base/thread_unittest");
   *value = !*value;
 }
 
@@ -33,8 +39,8 @@ class SleepInsideInitThread : public Thread {
  public:
   SleepInsideInitThread() : Thread("none") {
     init_called_ = false;
-    ANNOTATE_BENIGN_RACE(
-        this, "Benign test-only data race on vptr - http://crbug.com/98219");
+    //ANNOTATE_BENIGN_RACE(
+    //    this, "Benign test-only data race on vptr - http://crbug.com/98219");
   }
   ~SleepInsideInitThread() override { Stop(); }
 
@@ -120,7 +126,10 @@ void ReturnThreadId(base::Thread* thread,
 
 }  // namespace
 
+
+
 TEST_F(ThreadTest, Restart) {
+
   Thread a("Restart");
   a.Stop();
   EXPECT_FALSE(a.message_loop());
