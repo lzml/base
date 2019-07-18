@@ -34,14 +34,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(IntDir)</IntDir>
-    <OutDir>..\out\x86\debug</OutDir>
+    <OutDir>..\out\debug</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(IntDir)</IntDir>
     <OutDir>..\out\x86\debug</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\out\x64\debug</OutDir>
+    <OutDir>..\out\debug</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(IntDir)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -49,16 +49,20 @@
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(IntDir)</IntDir>
   </PropertyGroup>
   <ItemGroup>
+    <ClInclude Include="..\base\test\test_pending_task.h" />
+    <ClInclude Include="..\base\test\test_simple_task_runner.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\base\at_exit_unittest.cc" />
+    <ClCompile Include="..\base\message_loop\message_loop_unittest.cc" />
     <ClCompile Include="..\base\process\memory_unittest.cc" />
     <ClCompile Include="..\base\strings\nullable_string16_unittest.cc" />
     <ClCompile Include="..\base\strings\pattern_unittest.cc" />
-    <ClCompile Include="..\base\strings\safe_sprintf_unittest.cc" />
     <ClCompile Include="..\base\strings\string16_unittest.cc" />
     <ClCompile Include="..\base\task_scheduler\scheduler_worker_thread_unittest.cc" />
+    <ClCompile Include="..\base\test\test_pending_task.cc" />
+    <ClCompile Include="..\base\test\test_simple_task_runner.cc" />
     <ClCompile Include="..\base\threading\non_thread_safe_unittest.cc" />
     <ClCompile Include="..\base\threading\platform_thread_unittest.cc" />
     <ClCompile Include="..\base\threading\simple_thread_unittest.cc" />

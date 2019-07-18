@@ -15,9 +15,6 @@
     <ClCompile Include="..\base\strings\pattern_unittest.cc">
       <Filter>base\strings</Filter>
     </ClCompile>
-    <ClCompile Include="..\base\strings\safe_sprintf_unittest.cc">
-      <Filter>base\strings</Filter>
-    </ClCompile>
     <ClCompile Include="..\base\threading\simple_thread_unittest.cc">
       <Filter>base\threading</Filter>
     </ClCompile>
@@ -39,9 +36,24 @@
     <ClCompile Include="..\base\threading\platform_thread_unittest.cc">
       <Filter>base\threading</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\message_loop\message_loop_unittest.cc">
+      <Filter>base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_pending_task.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_simple_task_runner.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="..\base\test\test_pending_task.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\test_simple_task_runner.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="base">
@@ -64,6 +76,9 @@
     </Filter>
     <Filter Include="base\task_scheduler">
       <UniqueIdentifier>{376c1bb3-ae2c-4a52-bfde-ffca1c99246a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\test">
+      <UniqueIdentifier>{1c060fc5-7023-44a9-81cc-34941891fd25}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
