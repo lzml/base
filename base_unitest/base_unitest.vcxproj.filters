@@ -45,6 +45,18 @@
     <ClCompile Include="..\base\test\test_simple_task_runner.cc">
       <Filter>base\test</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\win\wrapped_window_proc_unittest.cc">
+      <Filter>base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\win\message_window_unittest.cc">
+      <Filter>base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\message_loop\message_loop_task_runner_unittest.cc">
+      <Filter>base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\message_loop\message_loop_test.cc">
+      <Filter>base\message_loop</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -53,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="..\base\test\test_simple_task_runner.h">
       <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\message_loop\message_loop_test.h">
+      <Filter>base\message_loop</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +94,12 @@
     </Filter>
     <Filter Include="base\test">
       <UniqueIdentifier>{1c060fc5-7023-44a9-81cc-34941891fd25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\win">
+      <UniqueIdentifier>{ff81ce59-876e-421f-a08d-29957f4fad4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\memory">
+      <UniqueIdentifier>{d92c1b7f-dce9-41bd-9fe9-ebd01cdfd59a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
