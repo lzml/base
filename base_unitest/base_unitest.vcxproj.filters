@@ -57,6 +57,18 @@
     <ClCompile Include="..\base\message_loop\message_loop_test.cc">
       <Filter>base\message_loop</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\memory\ref_counted_memory_unittest.cc">
+      <Filter>base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\opaque_ref_counted.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\memory\ref_counted_unittest.cc">
+      <Filter>base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\memory\weak_ptr_unittest.cc">
+      <Filter>base\memory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -68,6 +80,9 @@
     </ClInclude>
     <ClInclude Include="..\base\message_loop\message_loop_test.h">
       <Filter>base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\opaque_ref_counted.h">
+      <Filter>base\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

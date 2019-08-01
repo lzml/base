@@ -50,12 +50,20 @@
   </PropertyGroup>
   <ItemGroup>
     <ClInclude Include="..\base\message_loop\message_loop_test.h" />
+    <ClInclude Include="..\base\test\opaque_ref_counted.h" />
     <ClInclude Include="..\base\test\test_pending_task.h" />
     <ClInclude Include="..\base\test\test_simple_task_runner.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\base\at_exit_unittest.cc" />
+    <ClCompile Include="..\base\memory\ref_counted_memory_unittest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\base\memory\ref_counted_unittest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\base\memory\weak_ptr_unittest.cc" />
     <ClCompile Include="..\base\message_loop\message_loop_task_runner_unittest.cc" />
     <ClCompile Include="..\base\message_loop\message_loop_test.cc" />
     <ClCompile Include="..\base\message_loop\message_loop_unittest.cc" />
@@ -64,6 +72,7 @@
     <ClCompile Include="..\base\strings\pattern_unittest.cc" />
     <ClCompile Include="..\base\strings\string16_unittest.cc" />
     <ClCompile Include="..\base\task_scheduler\scheduler_worker_thread_unittest.cc" />
+    <ClCompile Include="..\base\test\opaque_ref_counted.cc" />
     <ClCompile Include="..\base\test\test_pending_task.cc" />
     <ClCompile Include="..\base\test\test_simple_task_runner.cc" />
     <ClCompile Include="..\base\threading\non_thread_safe_unittest.cc" />
