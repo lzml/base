@@ -69,6 +69,15 @@
     <ClCompile Include="..\base\memory\weak_ptr_unittest.cc">
       <Filter>base\memory</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\base64_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\base64url_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\cpu_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

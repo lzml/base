@@ -49,7 +49,9 @@
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(IntDir)</IntDir>
   </PropertyGroup>
   <ItemGroup>
-    <ClInclude Include="..\base\message_loop\message_loop_test.h" />
+    <ClInclude Include="..\base\message_loop\message_loop_test.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="..\base\test\opaque_ref_counted.h" />
     <ClInclude Include="..\base\test\test_pending_task.h" />
     <ClInclude Include="..\base\test\test_simple_task_runner.h" />
@@ -57,16 +59,31 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\base\at_exit_unittest.cc" />
+    <ClCompile Include="..\base\base64url_unittest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\base\base64_unittest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\base\cpu_unittest.cc" />
     <ClCompile Include="..\base\memory\ref_counted_memory_unittest.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\base\memory\ref_counted_unittest.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\base\memory\weak_ptr_unittest.cc" />
-    <ClCompile Include="..\base\message_loop\message_loop_task_runner_unittest.cc" />
-    <ClCompile Include="..\base\message_loop\message_loop_test.cc" />
-    <ClCompile Include="..\base\message_loop\message_loop_unittest.cc" />
+    <ClCompile Include="..\base\memory\weak_ptr_unittest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\base\message_loop\message_loop_task_runner_unittest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\base\message_loop\message_loop_test.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\base\message_loop\message_loop_unittest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\base\process\memory_unittest.cc" />
     <ClCompile Include="..\base\strings\nullable_string16_unittest.cc" />
     <ClCompile Include="..\base\strings\pattern_unittest.cc" />
