@@ -78,6 +78,96 @@
     <ClCompile Include="..\base\cpu_unittest.cc">
       <Filter>base</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\hash_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\id_map_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\md5_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\sha1_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\version_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\values_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\strings\sys_string_conversions_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\tuple_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\sys_info_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\sync_socket_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\rand_util_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\native_library_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\command_line_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\callback_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\bind_unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\process\process_util_unittest.cc">
+      <Filter>base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\multiprocess_test.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_timeouts.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_switches.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\base_switches.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\testing\multiprocess_func_list.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\time\time_win_unittest.cc">
+      <Filter>base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\time\time_unittest.cc">
+      <Filter>base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\time\pr_time_unittest.cc">
+      <Filter>base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\timer\timer_unittest.cc">
+      <Filter>base\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\timer\hi_res_timer_manager_unittest.cc">
+      <Filter>base\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\files\memory_mapped_file_unittest.cc">
+      <Filter>base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\files\file_util_unittest.cc">
+      <Filter>base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_file_util_win.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_file_util.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -91,6 +181,24 @@
       <Filter>base\message_loop</Filter>
     </ClInclude>
     <ClInclude Include="..\base\test\opaque_ref_counted.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\multiprocess_test.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\test_timeouts.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\test_switches.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\base_switches.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\testing\multiprocess_func_list.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\test_file_util.h">
       <Filter>base\test</Filter>
     </ClInclude>
   </ItemGroup>
@@ -124,6 +232,15 @@
     </Filter>
     <Filter Include="base\memory">
       <UniqueIdentifier>{d92c1b7f-dce9-41bd-9fe9-ebd01cdfd59a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\time">
+      <UniqueIdentifier>{81d54f6f-3fd5-4040-b123-b41975149e32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\timer">
+      <UniqueIdentifier>{e6603df8-b616-4f00-9021-8838a2fee9ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\files">
+      <UniqueIdentifier>{11887c00-e296-423a-ae82-e62ff739d1f1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

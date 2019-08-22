@@ -161,6 +161,11 @@ MULTIPROCESS_TEST_MAIN(SimpleChildProcess) {
 
 // TODO(viettrungluu): This should be in a "MultiProcessTestTest".
 TEST_F(ProcessUtilTest, SpawnChild) {
+
+	//初始化，没有测试会崩溃
+	base::CommandLine::Init(0, NULL);
+	TestTimeouts::Initialize();
+
   base::Process process = SpawnChild("SimpleChildProcess");
   ASSERT_TRUE(process.IsValid());
   int exit_code;

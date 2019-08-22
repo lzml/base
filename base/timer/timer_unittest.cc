@@ -112,7 +112,7 @@ void RunTest_OneShotTimer(base::MessageLoop::Type message_loop_type) {
   base::MessageLoop loop(message_loop_type);
 
   bool did_run = false;
-  OneShotTimerTester f(&did_run);
+  OneShotTimerTester f(&did_run, 1000);
   f.Start();
 
   base::MessageLoop::current()->Run();

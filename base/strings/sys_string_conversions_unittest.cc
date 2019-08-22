@@ -23,7 +23,7 @@ static const std::wstring kSysWideOldItalicLetterA = L"\xd800\xdf00";
 namespace base {
 
 TEST(SysStrings, SysWideToUTF8) {
-  EXPECT_EQ("Hello, world", SysWideToUTF8(L"Hello, world"));
+  EXPECT_EQ("\xe4\xbd\xa0\xe5\xa5\xbd, world", SysWideToUTF8(L"你好, world"));
   EXPECT_EQ("\xe4\xbd\xa0\xe5\xa5\xbd", SysWideToUTF8(L"\x4f60\x597d"));
 
   // >16 bits

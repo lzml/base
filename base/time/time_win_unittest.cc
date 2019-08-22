@@ -16,6 +16,9 @@
 #include "base/win/registry.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
+//  timeGetDevCaps用到了这个lib
+#pragma comment(lib, "WINMM.LIB")
+
 namespace base {
 namespace {
 
@@ -103,6 +106,7 @@ TEST(TimeTicks, MAYBE_WinRollover) {
     }
 
     // Start!
+
     SetEvent(g_rollover_test_start);
 
     // Wait for threads to finish

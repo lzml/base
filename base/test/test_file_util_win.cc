@@ -18,6 +18,9 @@
 #include "base/threading/platform_thread.h"
 #include "base/win/scoped_handle.h"
 
+//
+#pragma comment(lib,"shlwapi.lib")
+
 namespace base {
 
 namespace {
