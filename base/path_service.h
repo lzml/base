@@ -89,9 +89,14 @@ class BASE_EXPORT PathService {
   static bool RemoveOverride(int key);
 };
 
+bool BASE_EXPORT PathProvider(int key, FilePath* result);
+
+
 }  // namespace base
 
 // TODO(brettw) Convert all callers to using the base namespace and remove this.
 using base::PathService;
+
+
 
 #endif  // BASE_PATH_SERVICE_H_

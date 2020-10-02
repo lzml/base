@@ -20,7 +20,7 @@
 
 namespace base {
 
-bool PathProvider(int key, FilePath* result);
+
 
 #if defined(OS_WIN)
 bool PathProviderWin(int key, FilePath* result);
