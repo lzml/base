@@ -14,6 +14,13 @@
 #define BASE_EXPORT __declspec(dllimport)
 #endif  // defined(BASE_IMPLEMENTATION)
 
+#elif defined(X64)
+#if defined(BASE_IMPLEMENTATION)
+#define BASE_EXPORT __declspec(dllexport)
+#else
+#define BASE_EXPORT __declspec(dllimport)
+#endif  // defined(BASE_IMPLEMENTATION)
+
 #else  // defined(WIN32)
 #if defined(BASE_IMPLEMENTATION)
 #define BASE_EXPORT __attribute__((visibility("default")))

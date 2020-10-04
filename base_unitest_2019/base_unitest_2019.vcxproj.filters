@@ -9,6 +9,12 @@
     <ClCompile Include="..\base\memory\singleton_unittest.cc">
       <Filter>base\memory</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\threading\non_thread_safe_unittest.cc">
+      <Filter>base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\threading\thread_unittest.cc">
+      <Filter>base\threading</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -23,5 +29,11 @@
     <Filter Include="base\memory">
       <UniqueIdentifier>{bbc575b2-a1f9-48cd-b9a8-11829f5efbdf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="base\threading">
+      <UniqueIdentifier>{72bf873d-0d11-4fa4-ab56-0e3f48f2e685}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

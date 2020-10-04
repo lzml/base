@@ -131,7 +131,11 @@ void ReturnThreadId(base::Thread* thread,
 TEST_F(ThreadTest, Restart) {
 
   Thread a("Restart");
+  base::Thread ddd("123456");
+  ddd.Start();
+  auto  sdfsd = ddd.thread_name();
   a.Stop();
+  auto xxx = a.message_loop();
   EXPECT_FALSE(a.message_loop());
   EXPECT_FALSE(a.IsRunning());
   EXPECT_TRUE(a.Start());

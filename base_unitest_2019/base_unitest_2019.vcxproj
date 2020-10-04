@@ -43,6 +43,8 @@
     <ClCompile Include="..\base\strings\string16_unittest.cc">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\base\threading\non_thread_safe_unittest.cc" />
+    <ClCompile Include="..\base\threading\thread_unittest.cc" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
