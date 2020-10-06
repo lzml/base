@@ -32,7 +32,9 @@ void ToggleValue(bool* value) {
 	//处理没有导入lib，导致的这个宏无法使用，注释或者导入lib都可以
   //ANNOTATE_BENIGN_RACE(value, "Test-only data race on boolean "
   //                     "in base/thread_unittest");
+    Sleep(5000);
   *value = !*value;
+
 }
 
 class SleepInsideInitThread : public Thread {

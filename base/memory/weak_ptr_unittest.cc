@@ -181,11 +181,46 @@ class BackgroundThread : public Thread {
 
 }  // namespace
 
+class TestA
+{
+public:
+    int a;
+};
+
+class TestB :public TestA
+{
+public:
+    int b;
+};
 TEST(WeakPtrFactoryTest, Basic) {
   int data;
   WeakPtrFactory<int> factory(&data);
   WeakPtr<int> ptr = factory.GetWeakPtr();
   EXPECT_EQ(&data, ptr.get());
+
+  WeakPtr<TestB> pWeakB;
+  WeakPtr<TestA> pWeakA;
+  {
+      TestB testb;
+      testb.a = 1;
+      testb.b = 33;
+
+      WeakPtrFactory<TestB> factoryB(&testb);
+      pWeakB = factoryB.GetWeakPtr();
+      TestB* pB = pWeakB.get();
+
+      TestA* pA = (TestA*)(pB);
+      WeakPtrFactory<TestA> factoryA(pA);  
+      pWeakA = factoryA.GetWeakPtr();
+
+  }
+  auto p = pWeakB.get();
+  auto p2 = pWeakA.get();
+  EXPECT_EQ(pWeakB.get(), nullptr);
+  EXPECT_EQ(pWeakA.get(), nullptr);
+  EXPECT_EQ(pWeakB, nullptr);
+  EXPECT_EQ(pWeakA, nullptr);
+
 }
 
 TEST(WeakPtrFactoryTest, Comparison) {

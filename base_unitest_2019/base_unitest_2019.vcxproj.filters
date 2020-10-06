@@ -15,9 +15,78 @@
     <ClCompile Include="..\base\threading\thread_unittest.cc">
       <Filter>base\threading</Filter>
     </ClCompile>
+    <ClCompile Include="..\base\message_loop\message_loop_unittest.cc">
+      <Filter>base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_simple_task_runner.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\multiprocess_test.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\opaque_ref_counted.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_file_util.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_file_util_win.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_pending_task.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_switches.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\test\test_timeouts.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\message_loop\message_loop_test.cc">
+      <Filter>base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\testing\multiprocess_func_list.cc">
+      <Filter>base\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\base_switches.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\memory\weak_ptr_unittest.cc">
+      <Filter>base\memory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="..\base\test\test_simple_task_runner.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\multiprocess_test.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\opaque_ref_counted.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\test_file_util.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\test_pending_task.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\test_switches.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\test\test_timeouts.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\message_loop\message_loop_test.h">
+      <Filter>base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\testing\multiprocess_func_list.h">
+      <Filter>base\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\base_switches.h">
+      <Filter>base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="base">
@@ -31,6 +100,12 @@
     </Filter>
     <Filter Include="base\threading">
       <UniqueIdentifier>{72bf873d-0d11-4fa4-ab56-0e3f48f2e685}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\message_loop">
+      <UniqueIdentifier>{52c9b3dd-346b-4d43-8734-12159d9bdce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\test">
+      <UniqueIdentifier>{fa5a3170-f4c0-4887-adf3-98d5664c4adb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

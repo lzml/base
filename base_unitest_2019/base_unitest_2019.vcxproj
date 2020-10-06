@@ -36,15 +36,38 @@
     <OutDir>..\out\x64\debug</OutDir>
   </PropertyGroup>
   <ItemGroup>
+    <ClInclude Include="..\base\base_switches.h" />
+    <ClInclude Include="..\base\message_loop\message_loop_test.h" />
+    <ClInclude Include="..\base\test\multiprocess_test.h" />
+    <ClInclude Include="..\base\test\opaque_ref_counted.h" />
+    <ClInclude Include="..\base\test\test_file_util.h" />
+    <ClInclude Include="..\base\test\test_pending_task.h" />
+    <ClInclude Include="..\base\test\test_simple_task_runner.h" />
+    <ClInclude Include="..\base\test\test_switches.h" />
+    <ClInclude Include="..\base\test\test_timeouts.h" />
+    <ClInclude Include="..\testing\multiprocess_func_list.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\base\base_switches.cc" />
     <ClCompile Include="..\base\memory\singleton_unittest.cc" />
+    <ClCompile Include="..\base\memory\weak_ptr_unittest.cc" />
+    <ClCompile Include="..\base\message_loop\message_loop_test.cc" />
+    <ClCompile Include="..\base\message_loop\message_loop_unittest.cc" />
     <ClCompile Include="..\base\strings\string16_unittest.cc">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\base\test\multiprocess_test.cc" />
+    <ClCompile Include="..\base\test\opaque_ref_counted.cc" />
+    <ClCompile Include="..\base\test\test_file_util.cc" />
+    <ClCompile Include="..\base\test\test_file_util_win.cc" />
+    <ClCompile Include="..\base\test\test_pending_task.cc" />
+    <ClCompile Include="..\base\test\test_simple_task_runner.cc" />
+    <ClCompile Include="..\base\test\test_switches.cc" />
+    <ClCompile Include="..\base\test\test_timeouts.cc" />
     <ClCompile Include="..\base\threading\non_thread_safe_unittest.cc" />
     <ClCompile Include="..\base\threading\thread_unittest.cc" />
+    <ClCompile Include="..\testing\multiprocess_func_list.cc" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -86,7 +109,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;V8_DEPRECATION_WARNINGS;CLD_VERSION=2;ENABLE_MDNS=1;ENABLE_NOTIFICATIONS;ENABLE_PEPPER_CDMS;ENABLE_PLUGINS=1;ENABLE_PDF=1;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;USE_AURA=1;USE_DEFAULT_RENDER_THEME=1;USE_OPENSSL=1;NO_TCMALLOC;ENABLE_WEBRTC=1;DISABLE_NACL;ENABLE_EXTENSIONS=1;ENABLE_TASK_MANAGER=1;ENABLE_THEMES=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_SESSION_SERVICE=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_TOPCHROME_MD=1;USE_PROPRIETARY_CODECS;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;CHROMIUM_BUILD;ENABLE_MEDIA_ROUTER=1;FIELDTRIAL_TESTING_ENABLED;COMPONENT_BUILD;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_HAS_EXCEPTIONS=0;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;NTDDI_VERSION=0x0A000000;PSAPI_VERSION=1;_SECURE_ATL;_USING_V110_SDK71_;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;_WIN32_WINNT=0x0A00;WINVER=0x0A00;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;U_NOEXCEPT=;GTEST_HAS_POSIX_RE=0;GTEST_LANG_CXX11=0;UNIT_TEST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;V8_DEPRECATION_WARNINGS;CLD_VERSION=2;ENABLE_MDNS=1;ENABLE_NOTIFICATIONS;ENABLE_PEPPER_CDMS;ENABLE_PLUGINS=1;ENABLE_PDF=1;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;USE_AURA=1;USE_DEFAULT_RENDER_THEME=1;USE_OPENSSL=1;NO_TCMALLOC;ENABLE_WEBRTC=1;DISABLE_NACL;ENABLE_EXTENSIONS=1;ENABLE_TASK_MANAGER=1;ENABLE_THEMES=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_SESSION_SERVICE=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_TOPCHROME_MD=1;USE_PROPRIETARY_CODECS;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;CHROMIUM_BUILD;ENABLE_MEDIA_ROUTER=1;FIELDTRIAL_TESTING_ENABLED;COMPONENT_BUILD;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_HAS_EXCEPTIONS=0;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;NTDDI_VERSION=0x0A000000;PSAPI_VERSION=1;_SECURE_ATL;NOMINMAX;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;U_NOEXCEPT=;GTEST_HAS_POSIX_RE=0;GTEST_LANG_CXX11=0;UNIT_TEST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
